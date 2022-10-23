@@ -2,15 +2,15 @@
 #include <math.h>
 #include <stdlib.h>
 
-void a(), b(), c(), d(), e(), f(), g(), h();
-void a_1(), a_2(), a_3(), a_4();
-void b_1(), b_2(), b_3(), b_4();
-void c_1(), c_2(), c_3(), c_4();
-void d_1(), d_2(), d_3(), d_4();
-void e_1(), e_2(), e_3(), e_4();
-void f_1(), f_2(), f_3(), f_4();
-void g_1(), g_2(), g_3(), g_4();
-void h_1(), h_2(), h_3(), h_4();
+void kpa(), kpb(), kpc(), kpd(), kpe(), kpf(), kpg(), kph();
+void annb1(), annb2(), anntb1(), anntb2();
+void bnnb1(), bnnb2(), bnntb1(), bnntb2();
+void cnnb1(), cnnb2(), cnntb1(), cnntb2();
+void dnnb1(), dnnb2(), dnntb1(), dnntb2();
+void ennb1(), ennb2(), enntb1(), enntb2();
+void fnnb1(), fnnb2(), fnntb1(), fnntb2();
+void gnnb1(), gnnb2(), gnntb1(), gnntb2();
+void hnnb1(), hnnb2(), hnntb1(), hnntb2();
 void jenis_fasilitas(), mengulang();
 
 
@@ -52,37 +52,6 @@ void notaTagihan(char *nama, char *alamat, char *golongan, char *jenis_pelanggan
         printf("\t\t\t|| Total           : Rp. %.2f\n", biaya);
         printf("\t\t\t======================================================\n");
 }
-void listrik(){
-        system("cls");
-        printf("\t\t\t======================================================\n");
-        printf("\t\t\t||           Program Tagihan Rekening Air           ||\n");
-        printf("\t\t\t||        Algoritma dan Pemrograman kelas B         ||\n");
-        printf("\t\t\t||__________________________________________________||\n");
-        printf("\t\t\t||          Besar penggunaan listrik anda           ||\n");
-        printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| 1.  450 VA                                       ||\n");
-        printf("\t\t\t|| 2.  900 VA                                       ||\n");
-        printf("\t\t\t|| 3. 1300 VA                                       ||\n");
-        printf("\t\t\t|| 4. 1300 VA                                       ||\n");
-        printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| >> : ");
-}
-int inputan(){
-	char cek;
-	int pilih;
-
-	if(cek=scanf("%d%c", &pilih, &cek)!=2 || pilih<0 || pilih>2 || cek != '\n'){
-		fflush(stdin);
-		printf("\n\t\t\t____________________________________________");
-		printf("\n\t\t\t|        Masukan Input Yang Benar!         |");
-		printf("\n\t\t\t============================================");
-		printf("\n\t\t\t == ");
-		return inputan();
-		system("cls");
-	}else{
-		return pilih;
-	}
-}
 
 void mengulang(){
     int kondisi;
@@ -102,22 +71,6 @@ void mengulang(){
                 printf("t\t\t                 Terimakasih...                    \n");
                 exit (0);
             }
-}
-float valid(){
-	char cek;
-	float pilih;
-
-	if (cek=scanf("%f%c", &pilih, &cek)!=2|| pilih == 0){
-		fflush(stdin);
-		printf("\n\t\t\t____________________________________________");
-		printf("\n\t\t\t|        Masukan angka Yang Benar!         |");
-		printf("\n\t\t\t============================================");
-		printf("\n\t\t\t == ");
-		return valid();
-		system("cls");
-	}else{
-		return pilih;
-	}
 }
 void jenis_rumahtangga(){
     int kondisi;
@@ -140,19 +93,19 @@ void jenis_rumahtangga(){
         printf("\t\t\t>> "); scanf("%d", &kondisi);
 
 			if(kondisi == 1){
-				a();
+				kpa();
 			}
 			else if(kondisi == 2){
-				b();
+				kpb();
 			}
 			else if(kondisi == 3){
-				c();
+				kpc();
 			}
 			else if(kondisi == 4){
-				d();
+				kpd();
 			}
 			else if(kondisi == 5){
-				e();
+				kpe();
 			}
 			else if(kondisi == 0){
 				exit(0);
@@ -184,13 +137,13 @@ void jenis_usaha(){
         printf("\t\t\t>> "); scanf("%d", &kondisi);
 
 			if(kondisi == 1){
-				f();
+				kpf();
 			}
 			else if(kondisi == 2){
-				g();
+				kpg();
 			}
 			else if(kondisi == 3){
-				h();
+				kph();
 			}
 			else if(kondisi == 0){
 				exit(0);
@@ -235,176 +188,319 @@ void jenis_fasilitas(){
         
 }
 
-void a(){
-    listrik();
-    int kondisi = inputan();
-    switch (kondisi)
-    {
-        case 1:
-            a_1();
-            break;
-        case 2:
-            a_2();
-            break;
-        case 3:
-            a_3();
-            break;
-        case 4:
-            a_4();
-            break;
-        default:
-            break;
-        }
+void kpa(){
+    int kondisi;
+        system("cls");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t||           Program Tagihan Rekening Air           ||\n");
+        printf("\t\t\t||        Algoritma dan Pemrograman kelas B         ||\n");
+        printf("\t\t\t||__________________________________________________||\n");
+        printf("\t\t\t||          Besar penggunaan listrik anda           ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| 1.  450 VA                                       ||\n");
+        printf("\t\t\t|| 2.  900 VA                                       ||\n");
+        printf("\t\t\t|| 3. 1300 VA                                       ||\n");
+        printf("\t\t\t|| 4. 1300 VA                                       ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| >> "); scanf("%d", &kondisi);
+
+			if(kondisi == 1){
+				annb1();
+			}
+			else if(kondisi == 2){
+				annb2();
+			}
+			else if(kondisi == 3){
+				anntb1();
+			}
+			else if(kondisi == 4){
+				anntb2();
+			}
+			else if(kondisi == 0){
+				exit(0);
+            }
+            else{
+					printf("\n\t\t\t==============================");
+					printf("\n\t\t\t|     Silahkan menginput     |");
+					printf("\n\t\t\t|      data yang benar       |");
+					printf("\n\t\t\t==============================");
+			}
 }
-void b(){
-    listrik();
-    int kondisi = inputan();
-    switch (kondisi)
-    {
-        case 1:
-            b_1();
-            break;
-        case 2:
-            b_2();
-            break;
-        case 3:
-            b_3();
-            break;
-        case 4:
-            b_4();
-            break;
-        default:
-            break;
-        }
+void kpb(){
+    int kondisi;
+        system("cls");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t||           Program Tagihan Rekening Air           ||\n");
+        printf("\t\t\t||        Algoritma dan Pemrograman kelas B         ||\n");
+        printf("\t\t\t||__________________________________________________||\n");
+        printf("\t\t\t||          Besar penggunaan listrik anda           ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| 1.  450 VA                                       ||\n");
+        printf("\t\t\t|| 2.  900 VA                                       ||\n");
+        printf("\t\t\t|| 3. 1300 VA                                       ||\n");
+        printf("\t\t\t|| 4. 1300 VA                                       ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| >> ");scanf("%d", &kondisi);
+
+        
+			if(kondisi == 1){
+				bnnb1();
+			}
+			else if(kondisi == 2){
+				bnnb2();
+			}
+			else if(kondisi == 3){
+				bnntb1();
+			}
+			else if(kondisi == 4){
+				bnntb2();
+			}
+			else if(kondisi == 0){
+				exit(0);
+            }
+            else{
+					printf("\n\t\t\t==============================");
+					printf("\n\t\t\t|     Silahkan menginput     |");
+					printf("\n\t\t\t|      data yang benar       |");
+					printf("\n\t\t\t==============================");
+			}
 }
-void c(){
-    listrik();
-    int kondisi = inputan();
-    switch (kondisi)
-    {
-        case 1:
-            c_1();
-            break;
-        case 2:
-            c_2();
-            break;
-        case 3:
-            c_3();
-            break;
-        case 4:
-            c_4();
-            break;
-        default:
-            break;
-        }
+void kpc(){
+    int kondisi;
+        system("cls");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t||           Program Tagihan Rekening Air           ||\n");
+        printf("\t\t\t||        Algoritma dan Pemrograman kelas B         ||\n");
+        printf("\t\t\t||__________________________________________________||\n");
+        printf("\t\t\t||          Besar penggunaan listrik anda           ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| 1.  450 VA                                       ||\n");
+        printf("\t\t\t|| 2.  900 VA                                       ||\n");
+        printf("\t\t\t|| 3. 1300 VA                                       ||\n");
+        printf("\t\t\t|| 4. 1300 VA                                       ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| >> ");scanf("%d", &kondisi);
+        
+			if(kondisi == 1){
+				cnnb1();
+			}
+			else if(kondisi == 2){
+				cnnb2();
+			}
+			else if(kondisi == 3){
+				cnntb1();
+			}
+			else if(kondisi == 4){
+				cnntb2();
+			}
+			else if(kondisi == 0){
+				exit(0);
+            }
+            else{
+					printf("\n\t\t\t==============================");
+					printf("\n\t\t\t|     Silahkan menginput     |");
+					printf("\n\t\t\t|      data yang benar       |");
+					printf("\n\t\t\t==============================");
+			}
 }
-void d(){
-    listrik();
-    int kondisi = inputan();
-    switch (kondisi)
-    {
-        case 1:
-            d_1();
-            break;
-        case 2:
-            d_2();
-            break;
-        case 3:
-            d_3();
-            break;
-        case 4:
-            d_4();
-            break;
-        default:
-            break;
-        }
+void kpd(){
+    int kondisi;
+        system("cls");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t||           Program Tagihan Rekening Air           ||\n");
+        printf("\t\t\t||        Algoritma dan Pemrograman kelas B         ||\n");
+        printf("\t\t\t||__________________________________________________||\n");
+        printf("\t\t\t||          Besar penggunaan listrik anda           ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| 1.  450 VA                                       ||\n");
+        printf("\t\t\t|| 2.  900 VA                                       ||\n");
+        printf("\t\t\t|| 3. 1300 VA                                       ||\n");
+        printf("\t\t\t|| 4. 1300 VA                                       ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| >> ");scanf("%d", &kondisi);
+
+        
+			if(kondisi == 1){
+				dnnb1();
+			}
+			else if(kondisi == 2){
+				dnnb2();
+			}
+			else if(kondisi == 3){
+				dnntb1();
+			}
+			else if(kondisi == 4){
+				dnntb2();
+			}
+			else if(kondisi == 0){
+				exit(0);
+            }
+            else{
+					printf("\n\t\t\t==============================");
+					printf("\n\t\t\t|     Silahkan menginput     |");
+					printf("\n\t\t\t|      data yang benar       |");
+					printf("\n\t\t\t==============================");
+			}
 }
-void e(){
-    listrik();
-    int kondisi = inputan();
-    switch (kondisi)
-    {
-        case 1:
-            e_1();
-            break;
-        case 2:
-            e_2();
-            break;
-        case 3:
-            e_3();
-            break;
-        case 4:
-            e_4();
-            break;
-        default:
-            break;
-        }
+void kpe(){
+    int kondisi;
+        system("cls");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t||           Program Tagihan Rekening Air           ||\n");
+        printf("\t\t\t||        Algoritma dan Pemrograman kelas B         ||\n");
+        printf("\t\t\t||__________________________________________________||\n");
+        printf("\t\t\t||          Besar penggunaan listrik anda           ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| 1.  450 VA                                       ||\n");
+        printf("\t\t\t|| 2.  900 VA                                       ||\n");
+        printf("\t\t\t|| 3. 1300 VA                                       ||\n");
+        printf("\t\t\t|| 4. 1300 VA                                       ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| >> ");scanf("%d", &kondisi);
+
+        
+			if(kondisi == 1){
+				ennb1();
+			}
+			else if(kondisi == 2){
+				ennb2();
+			}
+			else if(kondisi == 3){
+				enntb1();
+			}
+			else if(kondisi == 4){
+				enntb2();
+			}
+			else if(kondisi == 0){
+				exit(0);
+            }
+            else{
+					printf("\n\t\t\t==============================");
+					printf("\n\t\t\t|     Silahkan menginput     |");
+					printf("\n\t\t\t|      data yang benar       |");
+					printf("\n\t\t\t==============================");
+			}
 }
-void f(){
-    listrik();
-    int kondisi = inputan();
-    switch (kondisi)
-    {
-        case 1:
-            f_1();
-            break;
-        case 2:
-            f_2();
-            break;
-        case 3:
-            f_3();
-            break;
-        case 4:
-            f_4();
-            break;
-        default:
-            break;
-        }
+void kpf(){
+    int kondisi;
+        system("cls");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t||           Program Tagihan Rekening Air           ||\n");
+        printf("\t\t\t||        Algoritma dan Pemrograman kelas B         ||\n");
+        printf("\t\t\t||__________________________________________________||\n");
+        printf("\t\t\t||          Besar penggunaan listrik anda           ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| 1.  450 VA                                       ||\n");
+        printf("\t\t\t|| 2.  900 VA                                       ||\n");
+        printf("\t\t\t|| 3. 1300 VA                                       ||\n");
+        printf("\t\t\t|| 4. 1300 VA                                       ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| >> ");scanf("%d", &kondisi);
+
+        
+			if(kondisi == 1){
+				fnnb1();
+			}
+			else if(kondisi == 2){
+				fnnb2();
+			}
+			else if(kondisi == 3){
+				fnntb1();
+			}
+			else if(kondisi == 4){
+				fnntb2();
+			}
+			else if(kondisi == 0){
+				exit(0);
+            }
+            else{
+					printf("\n\t\t\t==============================");
+					printf("\n\t\t\t|     Silahkan menginput     |");
+					printf("\n\t\t\t|      data yang benar       |");
+					printf("\n\t\t\t==============================");
+			}
 }
-void g(){
-    listrik();
-    int kondisi = inputan();
-    switch (kondisi)
-    {
-        case 1:
-            g_1();
-            break;
-        case 2:
-            g_2();
-            break;
-        case 3:
-            g_3();
-            break;
-        case 4:
-            g_4();
-            break;
-        default:
-            break;
-        }
+void kpg(){
+    int kondisi;
+        system("cls");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t||           Program Tagihan Rekening Air           ||\n");
+        printf("\t\t\t||        Algoritma dan Pemrograman kelas B         ||\n");
+        printf("\t\t\t||__________________________________________________||\n");
+        printf("\t\t\t||          Besar penggunaan listrik anda           ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| 1.  450 VA                                       ||\n");
+        printf("\t\t\t|| 2.  900 VA                                       ||\n");
+        printf("\t\t\t|| 3. 1300 VA                                       ||\n");
+        printf("\t\t\t|| 4. 1300 VA                                       ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| >> ");scanf("%d", &kondisi);
+
+        
+			if(kondisi == 1){
+				gnnb1();
+			}
+			else if(kondisi == 2){
+				gnnb2();
+			}
+			else if(kondisi == 3){
+				gnntb1();
+			}
+			else if(kondisi == 4){
+				gnntb2();
+			}
+			else if(kondisi == 0){
+				exit(0);
+            }
+            else{
+					printf("\n\t\t\t==============================");
+					printf("\n\t\t\t|     Silahkan menginput     |");
+					printf("\n\t\t\t|      data yang benar       |");
+					printf("\n\t\t\t==============================");
+			}
 }
-void h(){
-    listrik();
-    int kondisi = inputan();
-    switch (kondisi)
-    {
-        case 1:
-            h_1();
-            break;
-        case 2:
-            h_2();
-            break;
-        case 3:
-            h_3();
-            break;
-        case 4:
-            h_4();
-            break;
-        default:
-            break;
-        }
+void kph(){
+    int kondisi;
+        system("cls");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t||           Program Tagihan Rekening Air           ||\n");
+        printf("\t\t\t||        Algoritma dan Pemrograman kelas B         ||\n");
+        printf("\t\t\t||__________________________________________________||\n");
+        printf("\t\t\t||          Besar penggunaan listrik anda           ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| 1.  450 VA                                       ||\n");
+        printf("\t\t\t|| 2.  900 VA                                       ||\n");
+        printf("\t\t\t|| 3. 1300 VA                                       ||\n");
+        printf("\t\t\t|| 4. 1300 VA                                       ||\n");
+        printf("\t\t\t======================================================\n");
+        printf("\t\t\t|| >> ");scanf("%d", &kondisi);
+
+        
+			if(kondisi == 1){
+				hnnb1();
+			}
+			else if(kondisi == 2){
+				hnnb2();
+			}
+			else if(kondisi == 3){
+				hnntb1();
+			}
+			else if(kondisi == 4){
+				hnntb2();
+			}
+			else if(kondisi == 0){
+				exit(0);
+            }
+            else{
+					printf("\n\t\t\t==============================");
+					printf("\n\t\t\t|     Silahkan menginput     |");
+					printf("\n\t\t\t|      data yang benar       |");
+					printf("\n\t\t\t==============================");
+			}
 }
 
-void a_1(){
+
+void annb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -418,7 +514,7 @@ void a_1(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                Non Niaga Bersubsidi              ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar(); 
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -427,19 +523,19 @@ void a_1(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 1780;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 17800;fflush(stdin);
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 2060;
         }
         else if(pemakaian >20){
             total = pemakaian * 5880;
-        }
+        }else
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void a_2(){
+void annb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -453,7 +549,7 @@ void a_2(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                Non Niaga Bersubsidi              ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -462,10 +558,10 @@ void a_2(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 2060;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 20600;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 2340;
         }
         else if(pemakaian >20){
@@ -474,7 +570,7 @@ void a_2(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void a_3(){
+void anntb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -488,7 +584,7 @@ void a_3(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||             Non Niaga Tanpa Bersubsidi           ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -497,10 +593,10 @@ void a_3(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 6340;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 63400;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 9200;
         }
         else if(pemakaian >20){
@@ -509,7 +605,7 @@ void a_3(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);    
 }
-void a_4(){
+void anntb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -523,7 +619,7 @@ void a_4(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||             Non Niaga Tanpa Bersubsidi           ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -532,10 +628,10 @@ void a_4(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 6420;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 64200;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 9350;
         }
         else if(pemakaian >20){
@@ -545,7 +641,7 @@ void a_4(){
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
 
-void b_1(){
+void bnnb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -559,7 +655,7 @@ void b_1(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                Non Niaga Bersubsidi              ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -568,10 +664,10 @@ void b_1(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 2340;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 23400;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 2620;
         }
         else if(pemakaian >20){
@@ -580,7 +676,7 @@ void b_1(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void b_2(){
+void bnnb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -594,7 +690,7 @@ void b_2(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                Non Niaga Bersubsidi              ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -603,10 +699,10 @@ void b_2(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 2620;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 26200;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 2900;
         }
         else if(pemakaian >20){
@@ -615,7 +711,7 @@ void b_2(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void b_3(){
+void bnntb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -629,7 +725,7 @@ void b_3(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||             Non Niaga Tanpa Bersubsidi           ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -638,10 +734,10 @@ void b_3(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 6490;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 64900;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 9500;
         }
         else if(pemakaian >20){
@@ -650,7 +746,7 @@ void b_3(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total); 
 }
-void b_4(){
+void bnntb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -664,7 +760,7 @@ void b_4(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||             Non Niaga Tanpa Bersubsidi           ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -673,10 +769,10 @@ void b_4(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 6570;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 65700;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 9650;
         }
         else if(pemakaian >20){
@@ -686,7 +782,7 @@ void b_4(){
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total); 
 }
 
-void c_1(){
+void cnnb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -700,7 +796,7 @@ void c_1(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                Non Niaga Bersubsidi              ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 :"); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -709,10 +805,10 @@ void c_1(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 2900;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 29000;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 3180;
         }
         else if(pemakaian >20){
@@ -721,7 +817,7 @@ void c_1(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void c_2(){
+void cnnb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -735,7 +831,7 @@ void c_2(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                Non Niaga Bersubsidi              ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 :"); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -744,10 +840,10 @@ void c_2(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 3180;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 31800;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 3460;
         }
         else if(pemakaian >20){
@@ -756,7 +852,7 @@ void c_2(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void c_3(){
+void cnntb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -770,7 +866,7 @@ void c_3(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||             Non Niaga Tanpa Bersubsidi           ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -779,10 +875,10 @@ void c_3(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 6640;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 66400;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 9800;
         }
         else if(pemakaian >20){
@@ -791,7 +887,7 @@ void c_3(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total); 
 }
-void c_4(){
+void cnntb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -805,7 +901,7 @@ void c_4(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||             Non Niaga Tanpa Bersubsidi           ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -814,10 +910,10 @@ void c_4(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 6720;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 67200;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 9950;
         }
         else if(pemakaian >20){
@@ -827,7 +923,7 @@ void c_4(){
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total); 
 }
 
-void d_1(){
+void dnnb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -841,7 +937,7 @@ void d_1(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                Non Niaga Bersubsidi              ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -850,10 +946,10 @@ void d_1(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 3460;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 34600;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 3740;
         }
         else if(pemakaian >20){
@@ -862,7 +958,7 @@ void d_1(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void d_2(){
+void dnnb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -876,7 +972,7 @@ void d_2(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                Non Niaga Bersubsidi              ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -885,10 +981,10 @@ void d_2(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 3740;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 37400;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 4020;
         }
         else if(pemakaian >20){
@@ -897,7 +993,7 @@ void d_2(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void d_3(){
+void dnntb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -911,7 +1007,7 @@ void d_3(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||             Non Niaga Tanpa Bersubsidi           ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -920,10 +1016,10 @@ void d_3(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 6790;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 67900;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 10100;
         }
         else if(pemakaian >20){
@@ -932,7 +1028,7 @@ void d_3(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total); 
 }
-void d_4(){
+void dnntb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -946,7 +1042,7 @@ void d_4(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||             Non Niaga Tanpa Bersubsidi           ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -955,10 +1051,10 @@ void d_4(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 6870;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 68700;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 10250;
         }
         else if(pemakaian >20){
@@ -968,7 +1064,7 @@ void d_4(){
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total); 
 }
 
-void e_1(){
+void ennb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -982,7 +1078,7 @@ void e_1(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                Non Niaga Bersubsidi              ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -991,10 +1087,10 @@ void e_1(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 6940;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 69400;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 10400;
         }
         else if(pemakaian >20){
@@ -1003,7 +1099,7 @@ void e_1(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void e_2(){
+void ennb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1017,7 +1113,7 @@ void e_2(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                Non Niaga Bersubsidi              ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1026,10 +1122,10 @@ void e_2(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 7020;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 70200;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 10550;
         }
         else if(pemakaian >20){
@@ -1038,7 +1134,7 @@ void e_2(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void e_3(){
+void enntb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1052,7 +1148,7 @@ void e_3(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||             Non Niaga Tanpa Bersubsidi           ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1061,10 +1157,10 @@ void e_3(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 7090;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 70900;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 10700;
         }
         else if(pemakaian >20){
@@ -1073,7 +1169,7 @@ void e_3(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total); 
 }
-void e_4(){
+void enntb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1087,7 +1183,7 @@ void e_4(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||             Non Niaga Tanpa Bersubsidi           ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1096,10 +1192,10 @@ void e_4(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 7170;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 71700;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 10850;
         }
         else if(pemakaian >20){
@@ -1108,8 +1204,8 @@ void e_4(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total); 
 }
-//
-void f_1(){
+
+void fnnb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1123,7 +1219,7 @@ void f_1(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                  Niaga atau Usaha                ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1132,10 +1228,10 @@ void f_1(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 9200;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 92000;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 9850;
         }
         else if(pemakaian >20){
@@ -1144,7 +1240,7 @@ void f_1(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void f_2(){
+void fnnb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1158,7 +1254,7 @@ void f_2(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                  Niaga atau Usaha                ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1167,10 +1263,10 @@ void f_2(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 9500;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 95000;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 10150;
         }
         else if(pemakaian >20){
@@ -1179,7 +1275,7 @@ void f_2(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void f_3(){
+void fnntb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1193,7 +1289,7 @@ void f_3(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                  Niaga atau Usaha                ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1202,10 +1298,10 @@ void f_3(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 9800;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 98000;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 10450;
         }
         else if(pemakaian >20){
@@ -1214,7 +1310,7 @@ void f_3(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void f_4(){
+void fnntb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1228,7 +1324,7 @@ void f_4(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                  Niaga atau Usaha                ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1237,10 +1333,10 @@ void f_4(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 10100;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 101000;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 10750;
         }
         else if(pemakaian >20){
@@ -1250,7 +1346,7 @@ void f_4(){
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
 
-void g_1(){
+void gnnb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1264,7 +1360,7 @@ void g_1(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                  Niaga atau Usaha                ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1273,10 +1369,10 @@ void g_1(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 10400;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 104000;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 11050;
         }
         else if(pemakaian >20){
@@ -1285,7 +1381,7 @@ void g_1(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void g_2(){
+void gnnb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1299,7 +1395,7 @@ void g_2(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                  Niaga atau Usaha                ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1308,10 +1404,10 @@ void g_2(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 10700;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 107000;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 11350;
         }
         else if(pemakaian >20){
@@ -1320,7 +1416,7 @@ void g_2(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void g_3(){
+void gnntb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1334,7 +1430,7 @@ void g_3(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                  Niaga atau Usaha                ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1343,10 +1439,10 @@ void g_3(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 11000;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 110000;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 11650;
         }
         else if(pemakaian >20){
@@ -1355,7 +1451,7 @@ void g_3(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void g_4(){
+void gnntb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1369,7 +1465,7 @@ void g_4(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                  Niaga atau Usaha                ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1378,10 +1474,10 @@ void g_4(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 11300;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 113000;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 11950;
         }
         else if(pemakaian >20){
@@ -1391,7 +1487,7 @@ void g_4(){
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
 
-void h_1(){
+void hnnb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1405,7 +1501,7 @@ void h_1(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                  Niaga atau Usaha                ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1414,10 +1510,10 @@ void h_1(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 11600;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 116000;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 12250;
         }
         else if(pemakaian >20){
@@ -1426,7 +1522,7 @@ void h_1(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void h_2(){
+void hnnb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1440,7 +1536,7 @@ void h_2(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                  Niaga atau Usaha                ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1449,10 +1545,10 @@ void h_2(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 11900;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 119000;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 12550;
         }
         else if(pemakaian >20){
@@ -1461,7 +1557,7 @@ void h_2(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void h_3(){
+void hnntb1(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1475,7 +1571,7 @@ void h_3(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                  Niaga atau Usaha                ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1484,10 +1580,10 @@ void h_3(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 12200;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 122000;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 12850;
         }
         else if(pemakaian >20){
@@ -1496,7 +1592,7 @@ void h_3(){
         biaya = total + denda + adm + bpm;
         notaTagihan(nama, alamat, golongan, jenis_pelanggan, adm, bpm, denda, pemakaian, biaya, total);
 }
-void h_4(){
+void hnntb2(){
     system("cls");
     float total, biaya, pemakaianbulanini, pemakaianbulanlalu, pemakaian, denda, bpm, adm;
     char nama[100], alamat[100];
@@ -1510,7 +1606,7 @@ void h_4(){
         printf("\t\t\t||                      FORMULIR                    ||\n");
         printf("\t\t\t||                  Niaga atau Usaha                ||\n");
         printf("\t\t\t======================================================\n");
-        printf("\t\t\t|| Nama                 : "); scanf("%[^\n]", nama); getchar();
+        printf("\t\t\t|| Nama                 : "); fflush(stdin); scanf("%[^\n]", nama); getchar();
         printf("\t\t\t|| Alamat               : "); scanf("%[^\n]", alamat); getchar();
         printf("\t\t\t|| Pemakaian bulan lalu : "); scanf("%f", &pemakaianbulanlalu);
         printf("\t\t\t|| Pemakaian bulan ini  : "); scanf("%f", &pemakaianbulanini);
@@ -1519,10 +1615,10 @@ void h_4(){
         bpm = 5000;
         adm = 2000;
         pemakaian = pemakaianbulanini-pemakaianbulanlalu;
-        if(pemakaian<=10){
-            total = pemakaian * 12500;
+        if((pemakaian) > 0 && (pemakaian)<=10){
+            total = pemakaian = 125000;
         }
-        else if(pemakaian <=20){
+        else if((pemakaian) >10 && (pemakaian)<=20){
             total = pemakaian * 13150;
         }
         else if(pemakaian >20){
